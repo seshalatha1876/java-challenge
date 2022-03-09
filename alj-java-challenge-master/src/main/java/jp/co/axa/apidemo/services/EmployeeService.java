@@ -4,15 +4,23 @@ import jp.co.axa.apidemo.entities.Employee;
 
 import java.util.List;
 
+/**
+ * Changed the return types to cross check the results
+ *
+ */
+
 public interface EmployeeService {
 
     public List<Employee> retrieveEmployees();
+    
+    public List<Employee> retrievePaginatedEmployees(int pageNo, int pageSize);
 
     public Employee getEmployee(Long employeeId);
 
-    public void saveEmployee(Employee employee);
+    public Employee saveEmployee(Employee employee);
 
-    public void deleteEmployee(Long employeeId);
+    public String deleteEmployee(Long employeeId);
 
-    public void updateEmployee(Employee employee);
+    public Employee updateEmployee(Employee employee, Long employeeId);
+   
 }

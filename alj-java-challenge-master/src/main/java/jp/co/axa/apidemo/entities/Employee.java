@@ -1,7 +1,12 @@
 package jp.co.axa.apidemo.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,6 +15,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/** 
+ * Added required annotations to generated the complete entity bean
+ **/
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Builder
+@ToString
 @Entity
 @Table(name="EMPLOYEE")
 public class Employee {
